@@ -1,4 +1,4 @@
-# The Directory Conatins The Screeshots For The Task Command Line For The Win
+# This Directory Conatins The Screeshots For The Task Command Line For The Win
 
 ## Bash Scripting
 
