@@ -2,7 +2,7 @@
 # This bash script stops the "4-to_infinity_and_beyond" process
 # without using kill or killall
 
-pid=$(pgrep "4-to_infinity_and_beyond")
+pid="$$(pgrep 4-to_infinity_and_beyond)"
 
 if [ -n "$pid" ]; then
   
