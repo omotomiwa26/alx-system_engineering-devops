@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This bash script stops the "7-highlander" process
+# without using kill or killall
+
+pid="$$(pgrep 7-highlander)"
+
+if [ -n "$pid" ]; then
+  
+  pkill -15 -P "$pid"
+  echo "Process $pid (7-highlander) has been sent a SIGTERM signal to stop."
+else
+  echo "Process 7-highlander is not running."
+fi
