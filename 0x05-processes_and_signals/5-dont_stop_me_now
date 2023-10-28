@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This bash script displays "To infinity and beyond" indefinitely.
+# and stops it using kill
+
+#!/bin/bash
+
+
+pid=$(pgrep "4-to_infinity_and_beyond")
+
+
+if [ -n "$pid" ]; then
+    
+    kill "$pid"
+    echo "Process $pid (4-to_infinity_and_beyond) has been stopped."
+else
+    echo "Process 4-to_infinity_and_beyond is not running."
+fi
