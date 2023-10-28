@@ -2,11 +2,7 @@
 # This bash script displays "To infinity and beyond" indefinitely.
 # and stops it using kill
 
-#!/bin/bash
-
-
 pid=$(pgrep "4-to_infinity_and_beyond")
-
 
 if [ -n "$pid" ]; then
     
