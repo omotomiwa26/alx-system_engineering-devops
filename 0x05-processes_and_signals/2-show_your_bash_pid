@@ -3,4 +3,4 @@
 # thus allowing you to easily get the PID of your Bash process.
 # shellcheck disable=SC2009
 
-ps aux | grep bash
+ps -auxf | grep bash
