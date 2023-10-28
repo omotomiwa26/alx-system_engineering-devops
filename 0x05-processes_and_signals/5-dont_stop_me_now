@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# This bash script displays "To infinity and beyond" indefinitely.
-# and stops it using kill
+# This bash script stops "4-to_infinity_and_beyond" process using kill
 
 pid=$(pgrep "4-to_infinity_and_beyond")
 
