@@ -1,11 +1,4 @@
 #!/usr/bin/env bash
 # This bash script kills the process "7-highlander".
 
-pid="$(pgrep 7-highlander)"
-
-if [ -n "$pid" ]; then
-    kill -15 "$pid"
-    echo "Killed process $pid (7-highlander). There can be only one!"
-else
-    echo "Process 7-highlander is not running."
-fi
+kill -9 "$(pgrep -f 7-highlander)"
