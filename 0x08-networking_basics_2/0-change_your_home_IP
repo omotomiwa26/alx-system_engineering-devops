@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This bash script configures an Ubuntu server with the below requirements:
+#localhost resolves to 127.0.0.2.
+# facebook.com resolves to 8.8.8.8
+
+localhost_ip="127.0.0.2"
+facebook_ip="8.8.8.8"
+
+
+echo "$localhost_ip localhost" >> /etc/hosts
+echo "$facebook_ip facebook.com" >> /etc/hosts
+
+
+echo "DNS resolution has been configured:"
+echo "localhost resolves to $localhost_ip"
+echo "facebook.com resolves to $facebook_ip"
