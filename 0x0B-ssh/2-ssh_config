@@ -1,0 +1,6 @@
+Host *
+    PasswordAuthentication no
+    HostName 52.3.243.47
+    HostbasedAuthentication no
+    User ubuntu
+    IdentityFile ~/.ssh/school
