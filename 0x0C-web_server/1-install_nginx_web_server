@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This Bash script Installs and configures nginx on 258926-web-01 server ubuntu@52.3.243.47
+
+sudo apt -y update
+sudo apt -y install nginx
+ufw allow 'Nginx HTTP'
+sudo echo "Hello World!" > /var/www/html/index.html
+sudo service nginx restart
+
+ 
