@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This Bash script Install and configure HAproxy on 258926-lb-01 server.
+
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt install haproxy -y
+sudo chown $USER:$USER /etc/haproxy/haproxy.cfg
+sudo echo "ENABLED-=1">> /etc/default/haproxy
+sudo echo "frontend http_front
+	bind *.80
+	stats url /haproxy?stats
+	defualt_backend http_back
+backend http_back
+	balance roundrobin
+	server 258926-web-01 52.3.243.47:80 check
+	server 258926-web-02 100.25.165.37:80 check" >> /etc/haproxy/haproxy.cfg
+wget /downloads/haproxy/haproxy.init -O /etc/init.d/haproxy
+sudo service haproxy start
