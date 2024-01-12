@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# This Bash Script Configure your domain zone so that the subdomain www points to your load-balancer IP (lb-01) and will display information about subdomains
+
+audit_subdomain() {
+    domain=$1
+    subdomain=$2
+
+    if [ -z "$subdomain" ]; then
+        subdomains=("www" "lb-01" "web-01" "web-02")
+    else
+        subdomains=("$subdomain")
+    fi
+
+    for sub in "${subdomains[@]}"; do
+        record_type=$(dig +short -t CNAME "$sub.$domain" | awk '{print "CNAME"}')
+        if [ -z "$record_type" ]; then
+            record_type=$(dig +short -t A "$sub.$domain" | awk '{print "A"}')
+        fi
+
+        destination=$(dig +short "$sub.$domain")
+
+        if [ -z "$destination" ]; then
+            echo "The subdomain $sub is not configured for $domain."
+        else
+            echo "The subdomain $sub is a $record_type record and points to $destination."
+        fi
+    done
+}
+
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 <domain> [subdomain]"
+    exit 1
+fi
+
+domain=$1
+subdomain=$2
+
+audit_subdomain "$domain" "$subdomain"
