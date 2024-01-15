@@ -20,9 +20,9 @@ audit_subdomain() {
         destination=$(dig +short "$sub.$domain")
 
         if [ -z "$destination" ]; then
-            echo "The subdomain $sub is not configured for $domain."
+            echo "The subdomain $sub is not configured for $domain"
         else
-            echo "The subdomain $sub is a $record_type record and points to $destination."
+            echo "The subdomain $sub is a $record_type record and points to $destination"
         fi
     done
 }
