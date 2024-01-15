@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # This Bash Script fixes the nginx server to listen on port 80
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-sudo service nginx start
-pkill -9 "$(cat /var/run/nginx.pid)"
+sudo service nginx restart
+kill -9 "$(cat /var/run/nginx.pid)"
