@@ -8,4 +8,4 @@ fi
 
 username=$1 
 
-su -c "whoami" "$username"
+sudo -c "whoami" "$username"
