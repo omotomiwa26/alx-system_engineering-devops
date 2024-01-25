@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This Bash Script fixes container so that Nginx is running as the nginx user and listening on all active IPs on port 8080
+
+chmod 644 /etc/nginx/nginx.conf
+sed -Ei 's/\s*#?\s*user .*/user nginx;/' /etc/nginx/nginx.conf
+sed -Ei 's/(listen (\[::\]:)?80) /\180 /' /etc/nginx/sites-enabled/default
+pkill apache2
+
+# restart nginx
+su nginx -s /bin/bash -c 'service nginx restart'
