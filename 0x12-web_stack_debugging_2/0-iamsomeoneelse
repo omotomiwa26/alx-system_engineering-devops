@@ -8,4 +8,4 @@ fi
 
 username=$1 
 
-sudo -u "whoami" "$username"
+sudo -u "$username" whoami
