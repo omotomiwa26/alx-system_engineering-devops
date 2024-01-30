@@ -12,8 +12,8 @@ from sys import argv, exit
 REST_API_URL = "https://jsonplaceholder.typicode.com"
 
 if __name__ == '__main__':
-        if len(argv) > 1:
-            if argv[1].replace(".", "", 1).isdigit():
+    if len(argv) > 1:
+        if argv[1].replace(".", "", 1).isdigit():
             id = int(argv[1])
             response = r.get(F'{REST_API_URL}/users/{id}').json()
             task_request = r.get(F'{REST_API_URL}/todos').json()
