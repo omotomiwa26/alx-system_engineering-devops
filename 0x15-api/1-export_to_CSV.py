@@ -5,7 +5,7 @@
 """
 import csv as c
 import requests as r
-from sys import argv
+from sys import argv, exit
 
 REST_API_URL_USER = 'https://jsonplaceholder.typicode.com/users/'
 
@@ -25,11 +25,11 @@ if __name__ == '__main__':
     response = r.get(task)
     tasks = response.json()
 
-    with open(F'{user_id}.csv', 'w') as csvfile:
+    with open(F'{user_id}.csv', 'w') as file:
         for task in tasks:
             completed = task.get('completed')
             task_title = task.get('title')
 
-            """Csvfile Done"""
-            csvfile.write(F'"{user_id}","{user_name}",'
+            """print as Csvfile"""
+            file.write(F'"{user_id}","{user_name}",'
                           F'"{completed}","{task_title}"\n')
