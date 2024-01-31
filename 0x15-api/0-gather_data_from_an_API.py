@@ -20,7 +20,7 @@ if __name__ == '__main__':
         print("Error: Employee ID must be a valid integer.")
         exit(1)
     employee_id = int(argv[1])
-    response = r.get(F'{REST_API_URL}/users/{id}').json()
+    response = r.get(F'{REST_API_URL}/users/{employee_id}').json()
     task_request = r.get(F'{REST_API_URL}/todos').json()
     emp_name = response.get('name')
     tasks = list(filter(lambda x: x.get('userId') == employee_id,
