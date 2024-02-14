@@ -8,7 +8,6 @@ from collections import defaultdict as d
 import requests as r
 
 
-
 def count_words(subreddit, word_list):
     """
     This uses recursive function and parses
@@ -43,6 +42,6 @@ def count_words(subreddit, word_list):
                     if word.lower() in words:
                         counts[word.lower()] += words.count(word.lower())
             after = data['data']['after']
-            count_words(subreddit, word_list) + after + counts)
+            count_words(subreddit, word_list) + after + counts
     else:
-        print("Invalid subreddit or no results found.")
+        return ""
