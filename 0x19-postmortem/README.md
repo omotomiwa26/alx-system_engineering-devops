@@ -68,7 +68,7 @@ sed -i 's/phpp/php/g' /var/www/html/wp-settings.php
 
 - I changed the permission of the file `apache_error_fix.sh`using `chmod +x apache_error_fix.sh` then ran the file `./ apache_error_fix`.
 
-- After running the file succesfully i then ran `curl -sI 127.0.0.1` and discovered the error has being fixed by returnign `200 OK`
+- After running the file succesfully i then ran `curl -sI 127.0.0.1` and discovered the error has being fixed by returning `200 OK`
 
 ```
 root@e514b399d69d:~# curl -sI 127.0.0.1:80
