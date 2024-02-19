@@ -92,7 +92,7 @@ Link: <http://127.0.0.1/?rest_route=/>; rel="https://api.w.org/"
 Content-Type: text/html; charset=UTF-8
 ````
 
-- I also ran `curl -s 127.0.0.1:80 | grep Holberton` as a final test to accertain that everything is now working perfectly with no server errors
+- I also ran `curl -s 127.0.0.1:80 | grep Holberton` as a final test to accertain that everything is now working perfectly with no server errors.
 
 ````
 root@e514b399d69d:~# curl -s 127.0.0.1:80 | grep Holberton
@@ -105,3 +105,5 @@ root@e514b399d69d:~# curl -s 127.0.0.1:80 | grep Holberton
 ````
 
 ### Corrective and Preventative Measures
+
+- The fix was finally deployed to production with everything up and running perfectly and the users were updated that the [website](https://127.0.0.1) is back up with apologies for any inconviniences caused during the time the [website](https://127.0.0.1) was inaccessible.
