@@ -21,7 +21,7 @@ Duration:
 
 - End Time: January 18, 2024, 13:00 W.A.T
 
-Impact: Users were trying to access a wordpress [website](www.127.0.0.1) from their web browser the apache webserver was returning a 500 internal error.
+Impact: Users were trying to access a wordpress [website](https://127.0.0.1) from their web browser the apache webserver was returning a 500 internal error.
 
 Root Cause: The Apache error was discovered to be caused by an incorrect file extension in one of the web application configuration files.
 
@@ -29,13 +29,13 @@ Root Cause: The Apache error was discovered to be caused by an incorrect file ex
 
 -  12:30 W.A.T: The server error was detected when a user experincing the issue filled and the support form and the mail was immediatly received by my, the engineer on duty.
 
-- 12:35 W.A.T: I immediately swung into action by first trying to access the [website](www.127.0.0.1) from my browser to accertain the issue and i also encountered the same error.
+- 12:35 W.A.T: I immediately swung into action by first trying to access the [website](https://127.0.0.1) from my browser to accertain the issue and i also encountered the same error.
 
 - 12:40 W.A.T: I initiated the troubleshooting process according to standard software engineering and debugging procedures.
 
 - 12:55 W.A.T: I identified the cause of server error as bein an incorrect file extention in the web application configuration file precisely `class-wp-locale.phpp` file having a `.phpp` extension instead of `.php` extension.
 
-- 13:00 W.A.T: I fixed the error and the [website](www.127.0.0.1) was fully back and running perfectly with no issues.
+- 13:00 W.A.T: I fixed the error and the [website](https://127.0.0.1) was fully back and running perfectly with no issues.
 
 ### Root Cause and Resolution
 
@@ -72,7 +72,7 @@ Resolution:
 ```
 #!/usr/bin/env bash
 
-#This bash script fixes why Apache is returning a 500 errorin the [website](127.0.0.1)
+#This bash script fixes why Apache is returning a 500 errorin the [website](https://127.0.0.1)
 
 sed -i 's/phpp/php/g' /var/www/html/wp-settings.php
 ```
