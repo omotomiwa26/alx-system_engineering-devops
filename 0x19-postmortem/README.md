@@ -2,6 +2,13 @@
 
 ## DevOps SysAdmin
 
+<div align="center">
+<p>
+<img src="https://github.com/omotomiwa26/alx-system_engineer    ing-devops/blob/master/0x19-postmortem/debug.jpg" /> <img src="https://github.com/omotomiwa26/alx-system_engineering-dev    ops/blob/master/0x19-postmortem/fingerPaint-variables.gif" />
+</p>
+</div>
+
+
 ### Issue Summary
 
 Duration:
@@ -10,7 +17,7 @@ Duration:
 
 - End Time: January 18, 2024, 13:00 W.A.T
 
-Impact: Users were trying to access a wordpress [website](www.127.0.0.1) from their web breowser the apache webserver was returning a 500 internal error.
+Impact: Users were trying to access a wordpress [website](www.127.0.0.1) from their web browser the apache webserver was returning a 500 internal error.
 
 Root Cause: The Apache error was discovered to be caused by an incorrect file extension in one of the web application configuration files.
 
