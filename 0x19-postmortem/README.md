@@ -3,9 +3,13 @@
 ## DevOps SysAdmin
 
 <div align="center">
+
 <p>
-<img src="https://github.com/omotomiwa26/alx-system_engineer    ing-devops/blob/master/0x19-postmortem/debug.jpg" /> <img src="https://github.com/omotomiwa26/alx-system_engineering-dev    ops/blob/master/0x19-postmortem/fingerPaint-variables.gif" />
+
+<img src="https://github.com/omotomiwa26/alx-system_engineering-devops/blob/master/0x19-postmortem/debug.jpg"/> <img src="https://github.com/omotomiwa26/alx-system_engineering-devops/blob/master/0x19-postmortem/fingerPaint-variables.gif"/>
+
 </p>
+
 </div>
 
 
@@ -87,6 +91,8 @@ X-Powered-By: PHP/5.5.9-1ubuntu4.21
 Link: <http://127.0.0.1/?rest_route=/>; rel="https://api.w.org/"
 Content-Type: text/html; charset=UTF-8
 ````
+
+- I also ran `curl -s 127.0.0.1:80 | grep Holberton` as a final test to accertain that everything is now working perfectly with no server errors
 
 ````
 root@e514b399d69d:~# curl -s 127.0.0.1:80 | grep Holberton
